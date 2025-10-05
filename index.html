@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="logo.png" />
+    <title>PNR Organic Vermi Compost - Pure Organic Vermi Compost</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .lang-ta {
+            font-family: 'Noto Sans Tamil', sans-serif;
+        }
+
+        /* Hero Section with Fade-in Animation */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: bounceIn 2s ease-in-out;
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.3);
+                opacity: 0;
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            70% {
+                transform: scale(0.9);
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            animation: fadeIn 2s ease-out 0.5s both;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+            }
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #4CAF50;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            animation: slideDown 1s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            transition: max-height 0.3s ease-in-out;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #4CAF50;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            color: #333;
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        nav button:hover {
+            color: #4CAF50;
+        }
+
+        .logo {
+            height: 60px;
+            animation: rotateIn 1.5s ease-out;
+        }
+
+        @keyframes rotateIn {
+            from {
+                opacity: 0;
+                transform: rotate(-360deg);
+            }
+
+            to {
+                opacity: 1;
+                transform: rotate(0);
+            }
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333;
+            transition: transform 0.3s;
+        }
+
+        .menu-toggle.active {
+            transform: rotate(90deg);
+        }
+
+        /* About Section with Scroll Animations */
+        section {
+            padding: 80px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .about {
+            background: #f9f9f9;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(30px);
+            color: #ddd;
+            transition: all 0.8s ease;
+        }
+
+        .about.animate h2 {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            opacity: 0;
+            transition: all 0.8s ease 0.2s;
+            color: #ddd;
+        }
+
+        .about.animate p {
+            opacity: 1;
+        }
+
+        /* Products Grid with Card Flip Animation */
+        .products {
+            background: white;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            perspective: 1000px;
+            opacity: 0;
+            transform: rotateY(90deg) scale(0.8);
+            transition: all 0.6s ease;
+        }
+
+        .products.animate .card:nth-child(1) {
+            opacity: 1;
+            transform: rotateY(0) scale(1);
+            transition-delay: 0s;
+        }
+
+        .products.animate .card:nth-child(2) {
+            opacity: 1;
+            transform: rotateY(0) scale(1);
+            transition-delay: 0.2s;
+        }
+
+        .products.animate .card:nth-child(3) {
+            opacity: 1;
+            transform: rotateY(0) scale(1);
+            transition-delay: 0.4s;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-front {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+        }
+
+        .card-back {
+            background: #fff;
+            color: #333;
+            transform: rotateY(180deg);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            font-size: 1rem;
+        }
+
+        /* Testimonials with Slide Animation */
+        .testimonials {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+        }
+
+        .testimonial-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .testimonial {
+            max-width: 300px;
+            margin: 1rem;
+            opacity: 0;
+            transition: all 0.8s ease;
+        }
+
+        .testimonials.animate .testimonial:nth-child(1) {
+            transform: translateX(0);
+            opacity: 1;
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        .testimonials.animate .testimonial:nth-child(2) {
+            transform: translateX(0);
+            opacity: 1;
+            transition-delay: 0.2s;
+            animation: slideInUp 0.8s ease-out 0.2s;
+        }
+
+        .testimonials.animate .testimonial:nth-child(3) {
+            transform: translateX(0);
+            opacity: 1;
+            transition-delay: 0.4s;
+            animation: slideInRight 0.8s ease-out 0.4s;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Form with Shake Animation on Submit */
+        .contact {
+            background: #f9f9f9;
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 3rem auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        input,
+        textarea {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+            transform: scale(1.02);
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        footer.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .about h2,
+            .products h2,
+            .testimonials h2,
+            .contact h2 {
+                font-size: 2rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav .container {
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                max-height: 0;
+                overflow: hidden;
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+            }
+
+            nav ul.active {
+                max-height: 500px;
+                /* Adjust based on menu items */
+            }
+
+            nav li {
+                margin: 1rem 0;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .logo {
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <img src="logo.png" alt="PNR Organic Vermi Compost Logo" class="logo">
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            <ul id="nav-menu">
+                <li><a href="#home" data-key="nav-home">Home</a></li>
+                <li><a href="#about" data-key="nav-about">About</a></li>
+                <li><a href="#products" data-key="nav-products">Products</a></li>
+                <li><a href="#testimonials" data-key="nav-testimonials">Testimonials</a></li>
+                <li><a href="#contact" data-key="nav-contact">Contact</a></li>
+                <li><button id="lang-toggle" data-key="toggle-lang">Tamil</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 data-key="hero-h1">PNR Organic Vermi Compost</h1>
+            <p data-key="hero-p">Enriching the soil, one worm at a time. Pure, sustainable, and nutrient-rich organic
+                vermi compost.</p>
+            <a href="#about" class="btn" data-key="hero-btn">Discover More</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 data-key="about-h2">About Us</h2>
+            <p data-key="about-p">At PNR Organic Vermi Compost, we believe in sustainable composting the way nature
+                intended. Our commitment to organic practices ensures chemical-free, nutrient-rich compost that
+                nourishes your soil and plants. From our worms to your garden, every step is sustainable.</p>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem;" data-key="products-h2">Our Products
+            </h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3 data-key="veg-h3">Premium Vermi Compost</h3>
+                            <p data-key="veg-front-p">Rich in nutrients</p>
+                        </div>
+                        <div class="card-back">
+                            <h3 data-key="veg-h3">Premium Vermi Compost</h3>
+                            <p data-key="veg-back-p">Our high-quality vermi compost is produced using red worms,
+                                providing essential nutrients for plants.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3 data-key="fruit-h3">Organic pesticides</h3>
+                            <p data-key="fruit-front-p">Liquid pesticides</p>
+                        </div>
+                        <div class="card-back">
+                            <h3 data-key="fruit-h3">Organic pesticides</h3>
+                            <p data-key="fruit-back-p">A liquid extract that boosts plant growth with beneficial
+                                microbes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3 data-key="herb-h3">Compost Accessories</h3>
+                            <p data-key="herb-front-p">Tools for composting</p>
+                        </div>
+                        <div class="card-back">
+                            <h3 data-key="herb-h3">Compost Accessories</h3>
+                            <p data-key="herb-back-p">Everything you need to start your own vermi composting at home.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 2rem;" data-key="test-h2">What Our Customers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p data-key="test1-p">"The best vermi compost I've ever used! My plants are thriving."</p>
+                    <strong data-key="test1-strong">- Rajeswari</strong>
+                </div>
+                <div class="testimonial">
+                    <p data-key="test2-p">"Sustainable composting at its finest. Great for the environment and my
+                        garden."</p>
+                    <strong data-key="test2-strong">- Kumaresan</strong>
+                </div>
+                <div class="testimonial">
+                    <p data-key="test3-p">"Exceptional quality compost. Will keep coming back for more!"</p>
+                    <strong data-key="test3-strong">- Gopal</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 2rem;" data-key="contact-h2">Get In Touch</h2>
+            <form id="contactForm">
+                <h3 data-key="herb-h4">PNR Vermicompost</h3>
+                <p data-key="herb-front-p1">PNR West Garden</p>
+                <p data-key="herb-front-p2">Veelinackanpatti</p>
+                <p data-key="herb-front-p3">Nilakottai</p>
+                <p data-key="herb-front-p4">Dindigul-624 208</p>
+
+                <p data-key="herb-front-p5"> <i class="fa-solid fa-mobile"> </i> 90422 12077 / 9150176679 </p>
+                <p data-key="herb-front-p6"> <i class="fa-solid fa-envelope"> </i> Revathisparkle@gmail.com</p>
+            </form>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <p data-key="footer-p">&copy; 2025 PNR Organic Vermi Compost. All rights reserved. | Committed to Sustainable
+            Composting.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                'nav-home': 'Home',
+                'nav-about': 'About',
+                'nav-products': 'Products',
+                'nav-testimonials': 'Testimonials',
+                'nav-contact': 'Contact',
+                'hero-h1': 'PNR Organic Vermi Compost',
+                'hero-p': 'Enriching the soil, one worm at a time. Pure, sustainable, and nutrient-rich organic vermi compost.',
+                'hero-btn': 'Discover More',
+                'about-h2': 'About Us',
+                'about-p': 'At PNR Organic Vermi Compost, we believe in sustainable composting the way nature intended. Our commitment to organic practices ensures chemical-free, nutrient-rich compost that nourishes your soil and plants. From our worms to your garden, every step is sustainable.',
+                'products-h2': 'Our Products',
+                'veg-h3': 'Premium Vermi Compost',
+                'veg-front-p': 'Rich in nutrients',
+                'veg-back-p': 'Our high-quality vermi compost is produced using red worms, providing essential nutrients for plants.',
+                'fruit-h3': 'Organic Worm Tea',
+                'fruit-front-p': 'Liquid fertilizer',
+                'fruit-back-p': 'A liquid extract that boosts plant growth with beneficial microbes.',
+                'herb-h3': 'Compost Accessories',
+                'herb-front-p': 'Tools for composting',
+                'herb-back-p': 'Everything you need to start your own vermi composting at home.',
+                'test-h2': 'What Our Customers Say',
+                'test1-p': '"The best vermi compost I\'ve ever used! My plants are thriving."',
+                'test1-strong': '- Jane Doe',
+                'test2-p': '"Sustainable composting at its finest. Great for the environment and my garden."',
+                'test2-strong': '- John Smith',
+                'test3-p': '"Exceptional quality compost. Will keep coming back for more!"',
+                'test3-strong': '- Emily Johnson',
+                'herb-h3': 'PNR Vermicompost',
+                'herb-front-p1': 'PNR West Garden',
+                'herb-front-p2': 'Veelinackanpatti',
+                'herb-front-p3': 'Nilakottai',
+                'herb-front-p4': 'Dindigul-624 208',
+                'herb-front-p5': '90422 12077 / 9150176679',
+                'herb-front-p6': 'Revathisparkle@gmail.com',
+
+                'contact-h2': 'Get In Touch',
+                'name-placeholder': 'Your Name',
+                'email-placeholder': 'Your Email',
+                'message-placeholder': 'Your Message',
+                'send-btn': 'Send Message',
+                'footer-p': '&copy; 2025 PNR Organic Vermi Compost. All rights reserved. | Committed to Sustainable Composting.',
+                'toggle-lang': 'Tamil'
+            },
+            ta: {
+                'nav-home': 'வீடு',
+                'nav-about': 'பற்றி',
+                'nav-products': 'பொருட்கள்',
+                'nav-testimonials': 'சான்றுகள்',
+                'nav-contact': 'தொடர்பு',
+                'hero-h1': 'PNR இயற்கை மண்புழு உரம்',
+                'hero-p': 'மண்ணை செழுமைப்படுத்துதல், ஒரு புழு ஒரு நேரத்தில். தூய, நிலையான, மற்றும் ஊட்டச்சத்து செழுமையான இயற்கை மண்புழு உரம்.',
+                'hero-btn': 'மேலும் அறிய',
+                'about-h2': 'நம்மை பற்றி',
+                'about-p': 'PNR இயற்கை மண்புழு உரத்தில், இயற்கை திட்டமிட்ட வழியில் நிலையான உரமாக்கலை நம்புகிறோம். இயற்கை நடைமுறைகளுக்கான எங்கள் உறுதி வேதியியல் இல்லாத, ஊட்டச்சத்து செழுமையான உரத்தை உறுதிப்படுத்துகிறது, அது உங்கள் மண் மற்றும் தாவரங்களை பராமரிக்கிறது. எங்கள் புழுக்களிலிருந்து உங்கள் தோட்டம் வரை, ஒவ்வொரு படியும் நிலையானது.',
+                'products-h2': 'எங்கள் பொருட்கள்',
+                'veg-h3': 'பிரீமியம் மண்புழு உரம்',
+                'veg-front-p': 'ஊட்டச்சத்துக்களில் செழுமையானது',
+                'veg-back-p': 'எங்கள் உயர்தர மண்புழு உரம் சிவப்பு புழுக்களை பயன்படுத்தி உற்பத்தி செய்யப்படுகிறது, தாவரங்களுக்கு அத்தியாவசிய ஊட்டச்சத்துக்களை வழங்குகிறது.',
+                'fruit-h3': 'இயற்கை பூச்சிக்கொல்லிகள்',
+                'fruit-front-p': 'திரவ உரம்',
+                'fruit-back-p': 'பயனுள்ள நுண்ணுயிரிகளுடன் தாவர வளர்ச்சியை ஊக்குவிக்கும் திரவ சாறு.',
+                'herb-h3': 'உரம் உபகரணங்கள்',
+                'herb-front-p': 'உரமாக்கல் கருவிகள்',
+                'herb-back-p': 'வீட்டில் உங்கள் சொந்த மண்புழு உரமாக்கலை தொடங்க தேவையான அனைத்தும்.',
+                'test-h2': 'எங்கள் வாடிக்கையாளர்கள் என்ன சொல்கிறார்கள்',
+                'test1-p': '"நான் பயன்படுத்திய சிறந்த மண்புழு உரம்! என் தாவரங்கள் செழித்து வளர்கின்றன."',
+                'test1-strong': '- ராஜேஸ்வரி',
+                'test2-p': '"அதன் சிறந்த இடத்தில் நிலையான உரமாக்கல். சூழலுக்கும் என் தோட்டத்துக்கும் சிறந்தது."',
+                'test2-strong': '- குமரேசன்',
+                'test3-p': '"அபாரமான தர உரம். மேலும் பெறுவதற்கு மீண்டும் வருவேன்!"',
+                'test3-strong': '- குமரேசன்',
+                'contact-h2': 'தொடர்பு கொள்ள',
+                'name-placeholder': 'உங்கள் பெயர்',
+                'email-placeholder': 'உங்கள் மின்னஞ்சல்',
+                'herb-h3': 'PNR இயற்கை மண்புழு உரம்',
+                'herb-front-p1': 'PNR மேற்கு தோட்டம்',
+                'herb-front-p2': 'வீலிநாயக்கன்பட்டி',
+                'herb-front-p3': 'நிலக்கோட்டை',
+                'herb-front-p4': 'திண்டுக்கல்-624 208',
+                'herb-front-p5': '90422 12077 / 9150176679',
+                'herb-front-p6': 'Revathisparkle@gmail.com',
+
+                'message-placeholder': 'உங்கள் செய்தி',
+                'send-btn': 'செய்தியை அனுப்பு',
+                'footer-p': '&copy; 2025 PNR இயற்கை மண்புழு உரம். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை. | நிலையான உரமாக்கலுக்கு உறுதியளிக்கப்பட்டது.',
+                'toggle-lang': 'ஆங்கிலம்'
+            }
+        };
+
+        let currentLang = 'en';
+
+        function setLanguage(lang) {
+            document.querySelectorAll('[data-key]').forEach(el => {
+                el.textContent = translations[lang][el.dataset.key];
+            });
+            document.querySelectorAll('[data-placeholder]').forEach(el => {
+                el.placeholder = translations[lang][el.dataset.placeholder];
+            });
+            document.body.classList.toggle('lang-ta', lang === 'ta');
+            currentLang = lang;
+        }
+
+        document.getElementById('lang-toggle').addEventListener('click', () => {
+            const newLang = currentLang === 'en' ? 'ta' : 'en';
+            setLanguage(newLang);
+        });
+
+        // Hamburger Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Observe sections
+        document.querySelectorAll('.about, .products, .testimonials, footer').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth Scrolling for Nav Links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+                if (window.innerWidth <= 768) {
+                    navMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                }
+            });
+        });
+
+        // Form Submit Animation (Shake)
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            this.style.animation = 'shake 0.5s ease-in-out';
+            setTimeout(() => {
+                this.style.animation = '';
+                alert('Message sent! Thank you for reaching out.');
+            }, 500);
+        });
+
+        // Add Shake Keyframe
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+                20%, 40%, 60%, 80% { transform: translateX(5px); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Parallax Effect on Hero (Simple JS)
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
+    </script>
+</body>
+
+</html>
